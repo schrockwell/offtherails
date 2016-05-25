@@ -128,4 +128,7 @@ Some ways to flesh out this example include:
 * [Using Services to Keep Your Rails Controllers Clean and DRY](https://blog.engineyard.com/2014/keeping-your-rails-controllers-dry-with-services) by Ben Lewis
 * [Gourmet Service Objects](http://brewhouse.io/blog/2014/04/30/gourmet-service-objects.html) by Philippe Creux
 * [Anatomy of a Rails Service Object](http://multithreaded.stitchfix.com/blog/2015/06/02/anatomy-of-service-objects-in-rails/) by Dave Copeland
-* [Trailblazer::Operation](http://trailblazer.to/gems/operation/) is the service object for the Trailblazer application architecture
+
+### Gems
+
+* [Trailblazer](https://github.com/apotonick/trailblazer) – see documentation on [Trailblazer::Operation](http://trailblazer.to/gems/operation/)
