@@ -7,11 +7,8 @@
 
 # Site settings
 title: Off The Rails
-email: schrockwell@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://offtherails.io" # the base hostname & protocol for your site
-twitter_username: schrockwell
-github_username:  schrockwell
+baseurl: "/offtherails" # the subpath of your site, e.g. /blog
+url: "http://schrockwell.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
