@@ -1,1 +1,33 @@
-Herp derp
+---
+layout: default
+---
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 hidden-sm hidden-xs">
+			<h2>Off The Rails</h2>
+			<nav class="hidden-print" id="patterns-nav" data-spy="affix" data-offset-top="50">
+				<ul class="nav">
+					{% for pattern in site.patterns %}
+						<li><a href="#{{ pattern.id | split: '/' | last }}">{{ pattern.title }}</a></li>
+					{% endfor %}
+					<li class="divider"></li>
+					<li><a href="#contribute">Contribute Ideas</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-md-9 col-sm-12 col-xs-12">
+			<h2>Introduction</h2>
+			{% for pattern in site.patterns %}
+				<div class="pattern" id="{{ pattern.id | split: '/' | last }}">
+					{{ pattern.output }}
+				</div>
+			{% endfor %}
+
+			<div id="contribute">
+				Contribute Ideas
+			</div>
+		</div>
+	</div>
+</div>
+
