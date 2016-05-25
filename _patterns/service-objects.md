@@ -35,6 +35,7 @@ Service objects are not tied to any particular layer of the application, so the 
 
 * [Form objects](#form-objects) – encapsulate larger parameter sets having complex requirements into a form object, which can then be passed directly to the service object
 * [Policy objects](#policy-objects) - defer authorization to a class that specializes in it
+* [Controller proliferation](#controller-proliferation) - reuse service objects across multiple controllers in different contexts
 
 ### Use case: creating an invoice
 
