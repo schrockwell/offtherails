@@ -6,6 +6,11 @@ title: Service Objects
 
 A **service object** encapsulates complex business logic into a class, providing a single public method as an entry point for executing the logic. Often named as a verb (e.g. `SendInvoices`, `CreateUser`), a service object is not so much an *object* as it is an *action*.
 
+```ruby
+action = BuyPony.new(color: 'white', height: 14.2, adorable: true)
+action.call
+```
+
 As an application grows, simple CRUD actions can morph into a chain of callbacks, validations, and authorization checks. What was once a one-size-fits-all approach gives way to conditional execution peppered throughout the codebase. When that happens, it's time to think about using service objects for some or all of the domain logic.
 
 Since a service object is just a class, all relevant code is either in the class or called directly from the class. Custom behaviors can be derived via subclassing, and particularly long operations can be broken down into multiple service objects.
@@ -22,8 +27,9 @@ Service objects are not tied to any particular layer of the application, so the 
 ### Consider using service objects if you find that…
 
 * Complex, conditional callbacks are scattered across multiple models and controllers, making it difficult to determine what happens, where it happens, and under what conditions.
+* The same chunk of logic is called from multiple, disparate sources, e.g. the web, APIs, WebSockets, and background jobs.
 * Business logic requires knowledge of many models and their relationships.
-* The same chunk of logic is called from multiple, disparate sources (e.g. web, API, WebSockets, background jobs).
+* Business logic deals primarily with non-models, e.g. interacting with third-party APIs.
 
 ### Service objects pair well with:
 
